@@ -16,7 +16,7 @@ for i in range(len(rasterFiles)):
     # EVI 래스터 출력 위치/이름 지정
     outputName = rLayer.GetMetadata_Dict()['LOCALGRANULEID'][:-4]+'_EVI.tif'
     outputRaster = '..\outputRaster\'+ outputName
-
+    
     # 워프(재투영)
     gdal.Warp(outputRaster, rLayer, dstSRS='EPSG:4326')
 
